@@ -147,6 +147,7 @@ for n=2:ncmm
     ubar = (sqrt(rhoa)*ua + sqrt(rhob)*ub)/(sqrt(rhoa)+sqrt(rhob));
     hbar= (sqrt(rhoa)*ha + sqrt(rhob)*hb)/(sqrt(rhoa)+sqrt(rhob));
     abarquadro = (gamma-1)*(hbar - 0.5*ubar^2);
+    abarquadro= max(abarquadro,1e-12);
     lambdabar1 = ubar-sqrt(abarquadro);
     lambdabar2= ubar;
     lambdabar3= ubar+sqrt(abarquadro);
